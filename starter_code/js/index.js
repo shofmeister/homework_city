@@ -19,9 +19,6 @@
 // 
 
 
-
-
-
 $(document).ready(function(){
 
 	$("#submit-btn").click(update); //user clicks submit to trigger the function "update"
@@ -29,31 +26,31 @@ $(document).ready(function(){
 	function update(){
 		
 		event.preventDefault();
-		var city = $("input").val(); //user can enter a variable city in the input field
+		var city = $("#city-type").val(); //user can enter a variable city in the input field
 
 		//if the city is NYC or a variation, then change the body attribute to images/nyc.jpg
-		if (city = "nyc" || "NYC" || "New York City"){  
-			$("body").attr("class", ".../images/nyc.jpg");
+		if (city == "nyc" || city =="NYC" || city == "New York City"){  
+			$("body").attr("class", "nyc");
 		}
 
 		//if the city is sf or a variation, then change the body attribute to images/sf.jpg
-		if (city = "sf" || "Bay Area"){
-			$("body").attr("class", ".../images/sf.jpg");
+		else if (city == "sf" || city == "Bay Area"){
+			$("body").attr("class", "sf");
 		}
 
 		//if the city is LA or a variation, then change the body attribute to images/la.jpg
-		if (city = "LA" || "LAX"){
-			$("body").attr("class", ".../images/la.jpg");
+		else if (city == "LA" || city == "LAX"){
+			$("body").attr("class", "la");
 		}
 
 		//if the city is austin or a variation, then change the body attribute to images/austin.jpg
-		if (city = "Austin" || "ATX"){
-			$("body").attr("class", ".../images/austin.jpg");
+		else if (city == "Austin" || city == "ATX"){
+			$("body").attr("class", "austin");
 		}
 
 		//if the city is Sydney or a variation, then change the body attribute to images/sydney.jpg
-		if (city = "Sydney" || "SYD"){
-			$("body").attr("class", ".../images/sydney.jpg");
+		else if (city == "Sydney" || city == "SYD"){
+			$("body").attr("class", "sydney");
 		}
 
 	}
